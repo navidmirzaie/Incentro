@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="css/default.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+        <section class="form">
+            <h3>Welkom Incentronaut</h3>
+            <p class="gray-text">Je staat op het punt om bij een tof organisatie te werken !
+                Vul de formulier hieronder in.
+            </p>
+            <form name="postcodecheck" id="postcodecheck">
+                <!-- Voorletter en tussenvoegsel -->
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="voorletter">Voorletters <span>*</span></label>
+                        <input type="text" name="voorletter" id="voorletter" class="input" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="tussenvoegsel">Tussenvoegsel</label>
+                        <input type="text" name="tussenvoegsel" id="tussenvoegsel" class="input">
+                    </div>
+                </div>
+                <!-- einde voorletter en tussenvoegsel -->
+                <!-- achternaam -->
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="achternaam">
+                            Achternaam
+                            <span>*</span>
+                        </label>
+                        <input type="text" name="achternaam" id="achternaam" class="input" required>
+                    </div>
+                </div>
+                <!-- einde achternaam -->
+                <!-- Postcode en huisnummer -->
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="postcode">
+                            Postcode
+                            <span>*</span>
+                        </label>
+                        <input type="text" name="postcode" id="postcode" class="input" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="huisnummer">huisnummer <span>*</span></label>
+                        <input type="number" name="huisnummer" id="huisnummer" class="input" required>
+                    </div>
+                </div>
+                <!-- einde postcode en huisnummer -->
+                
+                <!-- straatnaam -->
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="straatnaam">Straatnaam</label>
+                        <input type="text" name="straatnaam" class="input" id="straatnaam">
+                    </div>
+                </div>
+                <!-- einde straatnaam -->
+
+                 <!-- Stad -->
+                 <div class="form-row">
+                    <div class="input-field">
+                        <label for="stad">Stad</label>
+                        <input type="text" name="stad" class="input" id="stad">
+                    </div>
+                </div>
+                <!-- einde stad -->
+
+                <!-- start email-->
+                <div class="form-row">
+                    <div class="input-field">
+                        <label for="email">Email <span>*</span></label>
+                        <input type="email" name="email" class="input" id="email" required>
+                    </div>
+                </div>
+                <!-- einde email-->
+
+                <div class="form-row">
+                    <div class="input-field">
+                        <input type="submit" value="verzenden">
+                    </div>
+                </div>
+
+            </form>
+        </section>
+        <section class="hero"></section>
+    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  </body>
+</html>
