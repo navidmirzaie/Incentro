@@ -1,162 +1,174 @@
-*, 
-*::before, 
+*,
+*::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 :root {
-    --black: #161616;
-    --orange: #fe5000;
-    --white: #ffffff;
-    --gray: #b2b2b2;
+  --black: #161616;
+  --orange: #fe5000;
+  --white: #ffffff;
+  --gray: #b2b2b2;
 }
 
 .black-text {
-    color: var(--black);
+  color: var(--black);
 }
 
 .gray-text {
-    color: var(--gray);
+  color: var(--gray);
 }
 
 .orange-text {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .white-text {
-    color: var(--white);
+  color: var(--white);
 }
 
-body  {
-  font-family: 'Montserrat', Arial, Helvetica, Sans-serif;
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, Sans-serif;
   padding: 0;
   margin: 0;
-  font-size: clamp(1rem, -2rem + 4vw, 2rem);
+  font-size: clamp(
+    0.875rem,
+    calc(0.875rem + ((1vw - 0.48rem) * 1.9531)),
+    1.5rem
+  );
+  height: 100%;
+  display: grid;
+  align-items: center;
 }
 
 .logo {
-    width: 150px;
+  width: 100px;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width: calc(100% - 32px);
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    border-radius: 5px;
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 5px;
 }
 
 .hero {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
 }
 
 /* Form Elements */
-form[name='postcodecheck'] {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 1rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
 }
 
 .form-row {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
 }
 
 .input-field {
-    display: flex;
-    position: relative;
-    flex: 1 1 auto;
-}
-
-.input-field--small {
-    flex: 0 0 75px;
+  display: flex;
+  position: relative;
+  flex: 1 1 auto;
 }
 
 .input-field label {
-    position: absolute;
-    font-size: 0.675rem;
-    top: 5px;
-    left: 10px;
-    color: #333;
+  position: absolute;
+  font-size: 0.675rem;
+  top: 5px;
+  left: 10px;
+  color: #333;
 }
 
 .input-field label > span {
-    padding-top: 3px;
-    color: red;
+  padding-top: 3px;
+  color: red;
 }
 
-.input-field input[type='number'],
-.input-field input[type='email'],
-.input-field input[type='text'] {
-    padding: 5px;
-    font-size: 1.1rem;
-    color: #000000;
-    background: #F7F7F8;
-    border-radius: 5px;
-    padding: 25px 5px 10px 10px;
-    border: none;
-    flex: 1 1 auto;
-    font-size: 0.875rem;
+.input-field input {
+  padding: 5px;
+  font-size: 1.1rem;
+  color: #000000;
+  background: #f7f7f8;
+  border-radius: 5px;
+  padding: 25px 5px 10px 10px;
+  border: none;
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  transition: background ease-in 0.35s;
 }
 
-input[type='text']:required:valid,
-input[type='email']:required:valid {
-    border: 2px solid green;
+input:required:valid,
+input:required:valid {
+  background: rgba(98, 277, 82, 0.2);
 }
 
-input[type='text'].invalid, 
-input[type='email'].invalid {
-    border: 2px solid red;
+input.invalid {
+  background: rgba(255, 0, 0, 0.2);
 }
 
-input[type='submit'] {
-    background: var(--orange);
-    color: var(--white);
-    padding: 10px;
-    border: none;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 1.2rem;
+input:read-only {
+  cursor: not-allowed;
+}
+
+input[type="submit"] {
+  background: var(--orange);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-appearance: none;
 }
 
 .hero {
-    background: url(https://images.ctfassets.net/8q83c033chii/4EWg8zC5HtlCT5fFKwgZC7/fed123a31684bbfbb145e424288dc403/cultuur_RVB0097__2_.jpg?fm=webp&q=75&w=1920);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  background: url(https://images.ctfassets.net/8q83c033chii/4EWg8zC5HtlCT5fFKwgZC7/fed123a31684bbfbb145e424288dc403/cultuur_RVB0097__2_.jpg?fm=webp&q=75&w=1920);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
-    .wrapper {
-        grid-template-columns: 1fr 1fr;
-        max-width: 1200px;
-        margin: 0.5rem auto;
-    }
+  main {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0.5rem auto;
+  }
 
-    :is(.form, .hero) {
-        grid-row-start: span 2;
-    }
+  :is(.form, .hero) {
+    grid-row-start: span 2;
+  }
 
-    .form {
-        padding: 3rem;
-    }
+  .form {
+    padding: 3rem;
+  }
 
-    .hero {
-        border-bottom-left-radius: 0;
-    }
+  .hero {
+    border-bottom-left-radius: 0;
+  }
 
-    .form-row {
-        gap: 10px;
-    }
+  .form-row {
+    gap: 10px;
+  }
 }
